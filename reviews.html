@@ -1,0 +1,1069 @@
+```html
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Reviews | राजेश्वर भगवान मंदिर</title>
+
+<link rel="stylesheet"
+      href="css/style.css">
+
+
+<style>
+
+/* =================================
+   REVIEW PAGE
+================================= */
+
+.review-page {
+
+    padding: 150px 20px 60px;
+
+    min-height: 80vh;
+
+}
+
+
+/* =================================
+   TITLE
+================================= */
+
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+}
+
+.section-title span {
+
+    color: #c47700;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+}
+
+.section-title h2 {
+
+    margin-top: 8px;
+
+}
+
+
+/* =================================
+   REVIEW FORM
+================================= */
+
+.review-box {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    background: rgba(255,255,255,0.97);
+
+    padding: 30px;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 10px 40px rgba(0,0,0,0.12);
+
+}
+
+
+.review-box input,
+.review-box textarea {
+
+    width: 100%;
+
+    padding: 14px 16px;
+
+    margin-bottom: 16px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 12px;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.3s;
+
+}
+
+
+.review-box input:focus,
+.review-box textarea:focus {
+
+    border-color: #c47700;
+
+    box-shadow:
+        0 0 0 3px rgba(196,119,0,0.10);
+
+}
+
+
+.review-box textarea {
+
+    height: 120px;
+
+    resize: vertical;
+
+}
+
+
+/* =================================
+   RATING
+================================= */
+
+.rating-title {
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+
+}
+
+
+.stars {
+
+    display: flex;
+
+    gap: 5px;
+
+    font-size: 34px;
+
+    cursor: pointer;
+
+    margin-bottom: 20px;
+
+}
+
+
+.stars span {
+
+    color: #d5d5d5;
+
+    transition: 0.2s;
+
+}
+
+
+.stars span:hover {
+
+    transform: scale(1.15);
+
+}
+
+
+.stars span.active {
+
+    color: #e8a400;
+
+}
+
+
+/* =================================
+   BUTTON
+================================= */
+
+.review-btn {
+
+    padding: 13px 28px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #c47700,
+            #e39a16
+        );
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.review-btn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(196,119,0,0.25);
+
+}
+
+
+/* =================================
+   REVIEWS
+================================= */
+
+.reviews-list {
+
+    max-width: 850px;
+
+    margin: 50px auto 0;
+
+}
+
+
+.review-heading {
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+}
+
+
+.review-heading h2 {
+
+    color: #633b00;
+
+}
+
+
+/* =================================
+   REVIEW CARD
+================================= */
+
+.review {
+
+    background: white;
+
+    padding: 22px;
+
+    margin-bottom: 18px;
+
+    border-radius: 17px;
+
+    border-left: 5px solid #d99000;
+
+    box-shadow:
+        0 6px 25px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+
+}
+
+
+.review:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.12);
+
+}
+
+
+.review-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.review h3 {
+
+    margin: 0;
+
+    color: #543300;
+
+    font-size: 19px;
+
+}
+
+
+.review-stars {
+
+    color: #e8a400;
+
+    font-size: 21px;
+
+    letter-spacing: 2px;
+
+    margin: 7px 0;
+
+}
+
+
+.review p {
+
+    color: #555;
+
+    line-height: 1.7;
+
+    margin: 8px 0;
+
+}
+
+
+.review small {
+
+    color: #999;
+
+}
+
+
+/* =================================
+   VERIFIED
+================================= */
+
+.verified {
+
+    font-size: 12px;
+
+    color: #4b8b3b;
+
+    background: #edf8ea;
+
+    padding: 4px 9px;
+
+    border-radius: 20px;
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media(max-width:768px) {
+
+    .review-page {
+
+        padding:
+            130px 15px 45px;
+
+    }
+
+
+    .review-box {
+
+        padding: 22px;
+
+        border-radius: 18px;
+
+    }
+
+
+    .stars {
+
+        font-size: 31px;
+
+    }
+
+
+    .review {
+
+        padding: 18px;
+
+    }
+
+
+    .review h3 {
+
+        font-size: 17px;
+
+    }
+
+
+    .review-stars {
+
+        font-size: 19px;
+
+    }
+
+}
+
+
+@media(max-width:480px) {
+
+    .review-page {
+
+        padding-top: 120px;
+
+    }
+
+
+    .section-title h2 {
+
+        font-size: 24px;
+
+    }
+
+
+    .review-box {
+
+        padding: 18px;
+
+    }
+
+
+    .stars {
+
+        font-size: 29px;
+
+    }
+
+
+    .review-btn {
+
+        width: 100%;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+<!-- =================================
+     HEADER
+================================= -->
+
+<header class="header">
+
+
+    <div class="logo-area">
+
+
+        <div class="logo">
+            ॐ
+        </div>
+
+
+        <div>
+
+            <h2>
+                राजेश्वर भगवान मंदिर
+            </h2>
+
+            <span>
+                बासनी सिलावटा
+            </span>
+
+        </div>
+
+
+    </div>
+
+
+
+    <button
+        class="menu-btn"
+        onclick="toggleMenu()">
+
+        ☰
+
+    </button>
+
+
+
+    <nav id="navbar">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="information.html">
+            Information
+        </a>
+
+        <a href="aarti.html">
+            आरती
+        </a>
+
+        <a href="gallery.html">
+            Gallery
+        </a>
+
+        <a href="reviews.html">
+            Reviews
+        </a>
+
+    </nav>
+
+
+</header>
+
+
+
+<!-- =================================
+     REVIEW SECTION
+================================= -->
+
+<section class="review-page">
+
+
+    <div class="section-title">
+
+        <span>
+            🙏 भक्तों की राय
+        </span>
+
+        <h2>
+            अपना अनुभव साझा करें
+        </h2>
+
+    </div>
+
+
+
+    <!-- =================================
+         REVIEW FORM
+    ================================= -->
+
+    <div class="review-box">
+
+
+        <input
+            id="reviewName"
+            type="text"
+            placeholder="आपका नाम"
+            maxlength="50"
+        >
+
+
+
+        <div class="rating-title">
+
+            मंदिर को कितनी Rating देंगे?
+
+        </div>
+
+
+
+        <div class="stars">
+
+            <span onclick="setRating(1)">★</span>
+
+            <span onclick="setRating(2)">★</span>
+
+            <span onclick="setRating(3)">★</span>
+
+            <span onclick="setRating(4)">★</span>
+
+            <span onclick="setRating(5)">★</span>
+
+        </div>
+
+
+
+        <textarea
+            id="reviewText"
+            placeholder="मंदिर के बारे में अपना अनुभव लिखें..."
+            maxlength="500"
+        ></textarea>
+
+
+
+        <button
+            class="review-btn"
+            onclick="addReview()">
+
+            Review भेजें 🙏
+
+        </button>
+
+
+    </div>
+
+
+
+    <!-- =================================
+         REVIEWS LIST
+    ================================= -->
+
+    <div
+        id="reviewsList"
+        class="reviews-list">
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =================================
+     FOOTER
+================================= -->
+
+<footer>
+
+    <div class="footer-bottom">
+
+        © 2026 Rajeshwar Bhagwan Mandir
+
+    </div>
+
+</footer>
+
+
+
+<script>
+
+
+/* =================================
+   RATING VARIABLE
+================================= */
+
+let rating = 0;
+
+
+
+/* =================================
+   DEFAULT REVIEWS
+================================= */
+
+const defaultReviews = [
+
+
+    {
+        name: "Jitendra Patel",
+
+        text:
+        "राजेश्वर भगवान मंदिर का वातावरण बहुत ही शांत और आध्यात्मिक है। दर्शन करके मन को बहुत शांति मिली। 🙏",
+
+        rating: 5,
+
+        date: "01/09/2026",
+
+        verified: true
+    },
+
+
+    {
+        name: "Vikram Patel",
+
+        text:
+        "मंदिर बहुत सुंदर और साफ-सुथरा है। भगवान राजेश्वर के दर्शन करके बहुत अच्छा अनुभव हुआ। हर हर महादेव 🙏",
+
+        rating: 5,
+
+        date: "02/09/2026",
+
+        verified: true
+    },
+
+
+    {
+        name: "Mahendra Patel",
+
+        text:
+        "बहुत ही पवित्र स्थान है। यहां आकर मन को सकारात्मक ऊर्जा मिलती है। जय राजेश्वर भगवान 🚩",
+
+        rating: 5,
+
+        date: "03/09/2026",
+
+        verified: true
+    },
+
+
+    {
+        name: "Bhagirath Patel",
+
+        text:
+        "मंदिर का वातावरण बेहद शांत है। परिवार के साथ दर्शन करने का बहुत अच्छा अनुभव रहा। 🙏",
+
+        rating: 5,
+
+        date: "05/09/2026",
+
+        verified: true
+    },
+
+
+    {
+        name: "Manish Patel",
+
+        text:
+        "बहुत अच्छा मंदिर है और यहां की आरती का अनुभव शानदार रहा। मंदिर की व्यवस्था भी अच्छी है।",
+
+        rating: 4,
+
+        date: "07/09/2026",
+
+        verified: true
+    }
+
+
+];
+
+
+
+/* =================================
+   INITIALIZE REVIEWS
+================================= */
+
+/*
+   अगर reviews पहले से मौजूद नहीं हैं,
+   तो default reviews save होंगे.
+*/
+
+/*
+   DEFAULT REVIEWS VERSION
+   इससे पुराना localStorage होने पर भी
+   ये 5 default reviews पहली बार load हो जाएंगे.
+*/
+const DEFAULT_REVIEWS_VERSION = "2026-09-09-v1";
+
+if (localStorage.getItem("defaultReviewsVersion") !== DEFAULT_REVIEWS_VERSION) {
+
+    localStorage.setItem(
+        "reviews",
+        JSON.stringify(defaultReviews)
+    );
+
+    localStorage.setItem(
+        "defaultReviewsVersion",
+        DEFAULT_REVIEWS_VERSION
+    );
+
+}
+
+
+
+/* =================================
+   MOBILE MENU
+================================= */
+
+function toggleMenu() {
+
+    document
+        .getElementById("navbar")
+        .classList.toggle("show");
+
+}
+
+
+
+/* =================================
+   SET RATING
+================================= */
+
+function setRating(value) {
+
+    rating = value;
+
+
+    const stars =
+        document.querySelectorAll(
+            ".stars span"
+        );
+
+
+    stars.forEach(
+        (star, index) => {
+
+            star.classList.toggle(
+                "active",
+                index < value
+            );
+
+        }
+    );
+
+}
+
+
+
+/* =================================
+   ADD REVIEW
+================================= */
+
+function addReview() {
+
+
+    const name =
+        document
+        .getElementById("reviewName")
+        .value
+        .trim();
+
+
+    const text =
+        document
+        .getElementById("reviewText")
+        .value
+        .trim();
+
+
+
+    if (!name || !text || rating === 0) {
+
+        alert(
+            "कृपया नाम, Rating और Review भरें।"
+        );
+
+        return;
+
+    }
+
+
+
+    const review = {
+
+        name: name,
+
+        text: text,
+
+        rating: rating,
+
+        date:
+        new Date()
+        .toLocaleDateString("hi-IN"),
+
+        verified: false
+
+    };
+
+
+
+    let reviews =
+        JSON.parse(
+            localStorage.getItem("reviews")
+        ) || [];
+
+
+
+    reviews.unshift(review);
+
+
+
+    localStorage.setItem(
+        "reviews",
+        JSON.stringify(reviews)
+    );
+
+
+
+    document
+        .getElementById("reviewName")
+        .value = "";
+
+
+    document
+        .getElementById("reviewText")
+        .value = "";
+
+
+    rating = 0;
+
+
+    setRating(0);
+
+
+
+    displayReviews();
+
+
+
+    alert(
+        "🙏 आपका Review सफलतापूर्वक भेज दिया गया।"
+    );
+
+}
+
+
+
+/* =================================
+   DISPLAY REVIEWS
+================================= */
+
+function displayReviews() {
+
+
+    const reviews =
+        JSON.parse(
+            localStorage.getItem("reviews")
+        ) || [];
+
+
+
+    const container =
+        document.getElementById(
+            "reviewsList"
+        );
+
+
+
+    container.innerHTML = "";
+
+
+
+    if (reviews.length === 0) {
+
+        container.innerHTML = `
+
+            <div class="no-reviews">
+
+                अभी कोई Review नहीं है।
+                सबसे पहले अपना अनुभव साझा करें। 🙏
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+
+    container.innerHTML = `
+
+        <div class="review-heading">
+
+            <h2>
+                भक्तों के अनुभव ❤️
+            </h2>
+
+        </div>
+
+    `;
+
+
+
+    reviews.forEach(review => {
+
+
+        const stars =
+            "★".repeat(review.rating) +
+            "☆".repeat(
+                5 - review.rating
+            );
+
+
+        const verified =
+            review.verified
+            ?
+            `<span class="verified">
+                ✓ Verified
+             </span>`
+            :
+            "";
+
+
+
+        container.innerHTML += `
+
+            <div class="review">
+
+
+                <div class="review-top">
+
+                    <h3>
+                        ${escapeHTML(review.name)}
+                    </h3>
+
+                    ${verified}
+
+                </div>
+
+
+
+                <div class="review-stars">
+
+                    ${stars}
+
+                </div>
+
+
+
+                <p>
+
+                    ${escapeHTML(review.text)}
+
+                </p>
+
+
+
+                <small>
+
+                    ${review.date}
+
+                </small>
+
+
+            </div>
+
+        `;
+
+    });
+
+}
+
+
+
+/* =================================
+   HTML SECURITY
+================================= */
+
+function escapeHTML(text) {
+
+    const div =
+        document.createElement("div");
+
+    div.textContent = text;
+
+    return div.innerHTML;
+
+}
+
+
+
+/* =================================
+   LOAD REVIEWS
+================================= */
+
+displayReviews();
+
+
+</script>
+
+
+</body>
+
+</html>
+```

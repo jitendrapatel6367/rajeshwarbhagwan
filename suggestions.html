@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Suggestions</title>
+
+<link rel="stylesheet"
+href="css/style.css">
+
+<style>
+
+.form-box {
+
+max-width:700px;
+
+margin:auto;
+
+background:white;
+
+padding:35px;
+
+border-radius:20px;
+
+box-shadow:0 10px 40px rgba(0,0,0,.1);
+
+}
+
+.form-group {
+
+margin-bottom:20px;
+
+}
+
+.form-group label {
+
+display:block;
+
+margin-bottom:7px;
+
+font-weight:bold;
+
+}
+
+input,
+textarea,
+select {
+
+width:100%;
+
+padding:13px;
+
+border-radius:10px;
+
+border:1px solid #ddd;
+
+font-family:inherit;
+
+}
+
+textarea {
+
+min-height:150px;
+
+resize:vertical;
+
+}
+
+.submit {
+
+border:0;
+
+padding:13px 30px;
+
+border-radius:30px;
+
+background:#d99000;
+
+color:white;
+
+font-weight:bold;
+
+cursor:pointer;
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header class="header">
+
+<div class="logo-area">
+
+<div class="logo">ॐ</div>
+
+<div>
+
+<h2>राजेश्वर भगवान मंदिर</h2>
+
+<span>बासनी सिलावटा</span>
+
+</div>
+
+</div>
+
+<button class="menu-btn"
+onclick="toggleMenu()">☰</button>
+
+<nav id="navbar">
+
+<a href="index.html">Home</a>
+<a href="information.html">Information</a>
+<a href="aarti.html">आरती</a>
+<a href="gallery.html">Gallery</a>
+<a href="reviews.html">Reviews</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+
+</header>
+
+
+<section style="padding-top:150px">
+
+
+<div class="section-title">
+
+<span>आपकी राय हमारे लिए महत्वपूर्ण है</span>
+
+<h2>सुझाव भेजें</h2>
+
+</div>
+
+
+<div class="form-box">
+
+<form onsubmit="submitSuggestion(event)">
+
+<div class="form-group">
+
+<label>नाम</label>
+
+<input
+type="text"
+id="name"
+placeholder="आपका नाम">
+
+</div>
+
+
+<div class="form-group">
+
+<label>Mobile / Email</label>
+
+<input
+type="text"
+id="contact"
+placeholder="Mobile या Email">
+
+</div>
+
+
+<div class="form-group">
+
+<label>श्रेणी</label>
+
+<select id="category">
+
+<option>Facility</option>
+<option>Seva</option>
+<option>Festival</option>
+<option>Other</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label>आपका सुझाव</label>
+
+<textarea
+id="suggestion"
+placeholder="अपना सुझाव लिखें..."
+required>
+</textarea>
+
+</div>
+
+
+<button class="submit">
+
+सुझाव भेजें 🙏
+
+</button>
+
+</form>
+
+</div>
+
+
+</section>
+
+
+<footer>
+
+<div class="footer-bottom">
+
+© 2026 Rajeshwar Bhagwan Mandir
+
+</div>
+
+</footer>
+
+
+<script>
+
+function toggleMenu() {
+
+document
+.getElementById("navbar")
+.classList.toggle("show");
+
+}
+
+
+function submitSuggestion(event) {
+
+event.preventDefault();
+
+const suggestion =
+document.getElementById("suggestion").value;
+
+if (suggestion.trim().length < 5) {
+
+alert("कृपया अपना सुझाव विस्तार से लिखें।");
+
+return;
+
+}
+
+alert(
+"🙏 धन्यवाद!\nआपका सुझाव प्राप्त हो गया है।"
+);
+
+event.target.reset();
+
+}
+
+</script>
+
+</body>
+
+</html>

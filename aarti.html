@@ -1,0 +1,1780 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>आरती एवं भजन | राजेश्वर भगवान मंदिर</title>
+
+<link rel="stylesheet"
+href="css/style.css">
+
+<style>
+
+/* ============================= */
+/* AARTI PAGE */
+/* ============================= */
+
+.aarti-container {
+
+    max-width: 950px;
+    margin: auto;
+    padding: 20px;
+
+}
+
+
+/* ============================= */
+/* BELL */
+/* ============================= */
+
+.bell-box {
+
+    text-align: center;
+    margin-bottom: 45px;
+
+}
+
+.bell {
+
+    font-size: 110px;
+    cursor: pointer;
+    display: inline-block;
+    transition: .3s;
+
+}
+
+.bell:hover {
+
+    transform: scale(1.08);
+
+}
+
+.bell.ringing {
+
+    animation: ring .5s infinite;
+
+}
+
+@keyframes ring {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(12deg);
+    }
+
+    50% {
+        transform: rotate(-12deg);
+    }
+
+    75% {
+        transform: rotate(8deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+
+}
+
+
+/* ============================= */
+/* MAIN AARTI PLAYER */
+/* ============================= */
+
+.main-player {
+
+    background: linear-gradient(
+        135deg,
+        #fff8e7,
+        #fff
+    );
+
+    border-radius: 25px;
+
+    padding: 30px;
+
+    margin-bottom: 40px;
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,.10);
+
+    text-align: center;
+
+    border: 1px solid #f0c36b;
+
+}
+
+.main-player h2 {
+
+    color: #8b4a00;
+
+    margin-bottom: 10px;
+
+}
+
+.main-player p {
+
+    color: #666;
+
+    margin-bottom: 20px;
+
+}
+
+.main-player audio {
+
+    width: 100%;
+
+    max-width: 650px;
+
+}
+
+
+/* ============================= */
+/* BHAJAN SECTION */
+/* ============================= */
+
+.bhajan-section {
+
+    margin-top: 30px;
+
+}
+
+.bhajan-heading {
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+}
+
+.bhajan-heading h2 {
+
+    color: #8b4a00;
+
+    margin-bottom: 8px;
+
+}
+
+.bhajan-heading p {
+
+    color: #666;
+
+}
+
+
+/* ============================= */
+/* BHAJAN CARD */
+/* ============================= */
+
+.bhajan {
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 20px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid #f0d28c;
+
+    box-shadow:
+        0 5px 18px rgba(0,0,0,.07);
+
+    transition: .3s;
+
+}
+
+.bhajan:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.12);
+
+}
+
+.bhajan.active {
+
+    border: 2px solid #e6a400;
+
+    background: #fffaf0;
+
+}
+
+
+/* BHAJAN TOP */
+
+.bhajan-top {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+}
+
+.bhajan-info {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+.bhajan-number {
+
+    width: 45px;
+
+    height: 45px;
+
+    min-width: 45px;
+
+    border-radius: 50%;
+
+    background: #e6a400;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: bold;
+
+}
+
+.bhajan-info h3 {
+
+    color: #7b4200;
+
+    font-size: 18px;
+
+    margin: 0;
+
+}
+
+
+/* ============================= */
+/* BUTTONS */
+/* ============================= */
+
+.bhajan-buttons {
+
+    display: flex;
+
+    gap: 8px;
+
+}
+
+.bhajan-buttons button,
+.main-buttons button {
+
+    border: none;
+
+    padding: 10px 18px;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: .2s;
+
+}
+
+.play-btn {
+
+    background: #e6a400;
+
+    color: white;
+
+}
+
+.pause-btn {
+
+    background: #eee;
+
+    color: #444;
+
+}
+
+.bhajan-buttons button:hover,
+.main-buttons button:hover {
+
+    transform: scale(1.04);
+
+}
+
+
+/* ============================= */
+/* PROGRESS */
+/* ============================= */
+
+.progress-area {
+
+    margin-top: 15px;
+
+}
+
+.progress-area input {
+
+    width: 100%;
+
+    cursor: pointer;
+
+}
+
+
+/* ============================= */
+/* MALA */
+/* ============================= */
+
+.mala-area {
+
+    margin-top: 50px;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #fff8e7,
+        #ffffff
+    );
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.deity {
+
+    width: 220px;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 8px solid #e3a329;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.deity:hover {
+
+    transform: scale(1.05);
+
+}
+
+.counter {
+
+    font-size: 24px;
+
+    margin-top: 20px;
+
+    font-weight: bold;
+
+    color: #a45a00;
+
+}
+
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+
+@media (max-width: 700px) {
+
+    .aarti-container {
+
+        padding: 12px;
+
+    }
+
+    .bell {
+
+        font-size: 85px;
+
+    }
+
+    .main-player {
+
+        padding: 22px 15px;
+
+    }
+
+    .bhajan {
+
+        padding: 15px;
+
+    }
+
+    .bhajan-top {
+
+        align-items: flex-start;
+
+    }
+
+    .bhajan-info h3 {
+
+        font-size: 16px;
+
+    }
+
+    .bhajan-buttons {
+
+        flex-direction: column;
+
+    }
+
+    .bhajan-buttons button {
+
+        padding: 8px 12px;
+
+    }
+
+    .deity {
+
+        width: 180px;
+
+        height: 180px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ============================= -->
+<!-- HEADER -->
+<!-- ============================= -->
+
+<header class="header">
+
+    <div class="logo-area">
+
+        <div class="logo">ॐ</div>
+
+        <div>
+
+            <h2>राजेश्वर भगवान मंदिर</h2>
+
+            <span>बासनी सिलावटा</span>
+
+        </div>
+
+    </div>
+
+
+    <button class="menu-btn"
+    onclick="toggleMenu()">☰</button>
+
+
+    <nav id="navbar">
+
+        <a href="index.html">Home</a>
+
+        <a href="information.html">
+            Information
+        </a>
+
+        <a href="about-rajeshwar.html">
+            राजेश्वर भगवान
+        </a>
+
+        <a href="aarti.html">
+            आरती
+        </a>
+
+        <a href="gallery.html">
+            Gallery
+        </a>
+
+        <a href="suggestions.html">
+            Suggestions
+        </a>
+
+        <a href="reviews.html">
+            Reviews
+        </a>
+
+        <a href="developer.html">
+            Developer
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- ============================= -->
+<!-- MAIN SECTION -->
+<!-- ============================= -->
+
+<section style="padding-top:150px">
+
+
+<div class="section-title">
+
+    <span>॥ हर हर महादेव ॥</span>
+
+    <h2>आरती एवं भजन</h2>
+
+    <p>
+        श्रद्धा एवं भक्ति के साथ भगवान राजेश्वर को नमन करें
+    </p>
+
+</div>
+
+
+<div class="aarti-container">
+
+
+<!-- ============================= -->
+<!-- TEMPLE BELL -->
+<!-- ============================= -->
+
+<div class="bell-box">
+
+    <h2>🔔 मंदिर की घंटी</h2>
+
+    <br>
+
+    <div
+    class="bell"
+    onclick="ringBell()">
+
+        🔔
+
+    </div>
+
+    <p>
+        घंटी बजाने के लिए क्लिक करें
+    </p>
+
+</div>
+
+
+<audio
+id="bellSound"
+src="assets/audio/temple-bell-543.mp3">
+</audio>
+
+
+
+<!-- ============================= -->
+<!-- AARTI -->
+<!-- ============================= -->
+
+<div class="main-player">
+
+    <h2>🙏 श्री राजेश्वर भगवान की आरती</h2>
+
+    <p>
+        आरती सुनने के लिए नीचे Play बटन दबाएं
+    </p>
+
+    <audio
+    id="aartiSound"
+    controls>
+
+        <source
+        src="assets/audio/aarti.mp3"
+        type="audio/mpeg">
+
+        आपका browser audio support नहीं करता।
+
+    </audio>
+
+</div>
+
+
+
+<!-- ============================= -->
+<!-- BHAJAN LIST -->
+<!-- ============================= -->
+
+<div class="bhajan-section">
+
+
+<div class="bhajan-heading">
+
+    <h2>🎵 भजन संग्रह</h2>
+
+    <p>
+        भगवान शिव एवं राजेश्वर भगवान के भक्तिमय भजन
+    </p>
+
+</div>
+
+
+
+<!-- 1 -->
+
+<div class="bhajan" id="card1">
+
+    <div class="bhajan-top">
+
+        <div class="bhajan-info">
+
+            <div class="bhajan-number">
+                1
+            </div>
+
+            <h3>
+                ॐ गणपति बप्पा मोरया
+            </h3>
+
+        </div>
+
+        <div class="bhajan-buttons">
+
+            <button
+            class="play-btn"
+            onclick="playBhajan(1)">
+                ▶ Play
+            </button>
+
+            <button
+            class="pause-btn"
+            onclick="pauseBhajan(1)">
+                ⏸ Pause
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="progress-area">
+
+        <input
+        type="range"
+        id="progress1"
+        value="0"
+        min="0"
+        max="100"
+        onchange="seekBhajan(1,this.value)">
+
+    </div>
+
+    <audio
+    id="bhajan1"
+    src="assets/audio/Ganapati Bappa Morya.mp3">
+    </audio>
+
+</div>
+
+
+
+<!-- 2 -->
+
+<div class="bhajan" id="card2">
+
+    <div class="bhajan-top">
+
+        <div class="bhajan-info">
+
+            <div class="bhajan-number">
+                2
+            </div>
+
+            <h3>
+                राजारामजी इण दुनिया में पाछा आवो 
+            </h3>
+
+        </div>
+
+        <div class="bhajan-buttons">
+
+            <button
+            class="play-btn"
+            onclick="playBhajan(2)">
+                ▶ Play
+            </button>
+
+            <button
+            class="pause-btn"
+            onclick="pauseBhajan(2)">
+                ⏸ Pause
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="progress-area">
+
+        <input
+        type="range"
+        id="progress2"
+        value="0"
+        min="0"
+        max="100"
+        onchange="seekBhajan(2,this.value)">
+
+    </div>
+
+    <audio
+    id="bhajan2"
+    src="assets/audio/Rajeshwar Bhagwan in duniya me pacha.mp3">
+    </audio>
+
+</div>
+
+
+
+<!-- 3 -->
+
+<div class="bhajan" id="card3">
+
+    <div class="bhajan-top">
+
+        <div class="bhajan-info">
+
+            <div class="bhajan-number">
+                3
+            </div>
+
+            <h3>
+                म्हारा सतगुरु राजाराम 
+            </h3>
+
+        </div>
+
+        <div class="bhajan-buttons">
+
+            <button
+            class="play-btn"
+            onclick="playBhajan(3)">
+                ▶ Play
+            </button>
+
+            <button
+            class="pause-btn"
+            onclick="pauseBhajan(3)">
+                ⏸ Pause
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="progress-area">
+
+        <input
+        type="range"
+        id="progress3"
+        value="0"
+        min="0"
+        max="100"
+        onchange="seekBhajan(3,this.value)">
+
+    </div>
+
+    <audio
+    id="bhajan3"
+    src="assets/audio/Mhara Satguru Rajaram - .mp3">
+    </audio>
+
+</div>
+
+
+
+<!-- 4 -->
+
+<div class="bhajan" id="card4">
+
+    <div class="bhajan-top">
+
+        <div class="bhajan-info">
+
+            <div class="bhajan-number">
+                4
+            </div>
+
+            <h3>
+                कलबी कुल अवतारी राजेश्वर तपधारी
+            </h3>
+
+        </div>
+
+        <div class="bhajan-buttons">
+
+            <button
+            class="play-btn"
+            onclick="playBhajan(4)">
+                ▶ Play
+            </button>
+
+            <button
+            class="pause-btn"
+            onclick="pauseBhajan(4)">
+                ⏸ Pause
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="progress-area">
+
+        <input
+        type="range"
+        id="progress4"
+        value="0"
+        min="0"
+        max="100"
+        onchange="seekBhajan(4,this.value)">
+
+    </div>
+
+    <audio
+    id="bhajan4"
+    src="assets/audio/Kalbi Kul Avtari  Rajeshwar Bhagwan Bhajan.mp3">
+    </audio>
+
+</div>
+
+
+
+<!-- 5 -->
+
+<div class="bhajan" id="card5">
+
+    <div class="bhajan-top">
+
+        <div class="bhajan-info">
+
+            <div class="bhajan-number">
+                5
+            </div>
+
+            <h3>
+                एक अर्ज मारी राजेश्वर दाता
+            </h3>
+
+        </div>
+
+        <div class="bhajan-buttons">
+
+            <button
+            class="play-btn"
+            onclick="playBhajan(5)">
+                ▶ Play
+            </button>
+
+            <button
+            class="pause-btn"
+            onclick="pauseBhajan(5)">
+                ⏸ Pause
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="progress-area">
+
+        <input
+        type="range"
+        id="progress5"
+        value="0"
+        min="0"
+        max="100"
+        onchange="seekBhajan(5,this.value)">
+
+    </div>
+
+    <audio
+    id="bhajan5"
+    src="assets/audio/Ek Araj Mari Rajeshwar Data.mp3">
+    </audio>
+
+</div>
+
+
+
+<!-- 6 -->
+
+<div class="bhajan" id="card6">
+
+    <div class="bhajan-top">
+
+        <div class="bhajan-info">
+
+            <div class="bhajan-number">
+                6
+            </div>
+
+            <h3>
+                मारा राजेश्वर पधारिया मारे आंगणे
+            </h3>
+
+        </div>
+
+        <div class="bhajan-buttons">
+
+            <button
+            class="play-btn"
+            onclick="playBhajan(6)">
+                ▶ Play
+            </button>
+
+            <button
+            class="pause-btn"
+            onclick="pauseBhajan(6)">
+                ⏸ Pause
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="progress-area">
+
+        <input
+        type="range"
+        id="progress6"
+        value="0"
+        min="0"
+        max="100"
+        onchange="seekBhajan(6,this.value)">
+
+    </div>
+
+    <audio
+    id="bhajan6"
+    src="assets/audio/mara rajeshwar padhariya aangne.mp3">
+    </audio>
+
+</div>
+
+
+
+<!-- 7 -->
+
+<div class="bhajan" id="card7">
+
+    <div class="bhajan-top">
+
+        <div class="bhajan-info">
+
+            <div class="bhajan-number">
+                7
+            </div>
+
+            <h3>
+                राजेश्वर जी री कृपा सु ठाठ घणा
+            </h3>
+
+        </div>
+
+        <div class="bhajan-buttons">
+
+            <button
+            class="play-btn"
+            onclick="playBhajan(7)">
+                ▶ Play
+            </button>
+
+            <button
+            class="pause-btn"
+            onclick="pauseBhajan(7)">
+                ⏸ Pause
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="progress-area">
+
+        <input
+        type="range"
+        id="progress7"
+        value="0"
+        min="0"
+        max="100"
+        onchange="seekBhajan(7,this.value)">
+
+    </div>
+
+    <audio
+    id="bhajan7"
+    src="assets/audio/Rajeshwar Ji Ri Kripa Su Ashok Prajapat  Bhajan.mp3">
+    </audio>
+
+</div>
+
+
+
+<!-- 8 -->
+
+<div class="bhajan" id="card8">
+
+    <div class="bhajan-top">
+
+        <div class="bhajan-info">
+
+            <div class="bhajan-number">
+                8
+            </div>
+
+            <h3>
+                दाता राजेश्वर थोरो शिकारपुरा में धाम
+            </h3>
+
+        </div>
+
+        <div class="bhajan-buttons">
+
+            <button
+            class="play-btn"
+            onclick="playBhajan(8)">
+                ▶ Play
+            </button>
+
+            <button
+            class="pause-btn"
+            onclick="pauseBhajan(8)">
+                ⏸ Pause
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="progress-area">
+
+        <input
+        type="range"
+        id="progress8"
+        value="0"
+        min="0"
+        max="100"
+        onchange="seekBhajan(8,this.value)">
+
+    </div>
+
+    <audio
+    id="bhajan8"
+    src="assets/audio/datarajeshwartharoshikarpuradham.mp3">
+    </audio>
+
+</div>
+
+
+
+<!-- 9 -->
+
+<div class="bhajan" id="card9">
+
+    <div class="bhajan-top">
+
+        <div class="bhajan-info">
+
+            <div class="bhajan-number">
+                9
+            </div>
+
+            <h3>
+            राजेश्वर आंजणा में चांदणो थे किदो
+            </h3>
+
+        </div>
+
+        <div class="bhajan-buttons">
+
+            <button
+            class="play-btn"
+            onclick="playBhajan(9)">
+                ▶ Play
+            </button>
+
+            <button
+            class="pause-btn"
+            onclick="pauseBhajan(9)">
+                ⏸ Pause
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="progress-area">
+
+        <input
+        type="range"
+        id="progress9"
+        value="0"
+        min="0"
+        max="100"
+        onchange="seekBhajan(9,this.value)">
+
+    </div>
+
+    <audio
+    id="bhajan9"
+    src="assets/audio/Rajeshwar bhajanchandano.mp3">
+    </audio>
+
+</div>
+
+
+
+<!-- 10 -->
+
+<div class="bhajan" id="card10">
+
+    <div class="bhajan-top">
+
+        <div class="bhajan-info">
+
+            <div class="bhajan-number">
+                10
+            </div>
+
+            <h3>
+                शिकारपुरा संतो री भूमि
+            </h3>
+
+        </div>
+
+        <div class="bhajan-buttons">
+
+            <button
+            class="play-btn"
+            onclick="playBhajan(10)">
+                ▶ Play
+            </button>
+
+            <button
+            class="pause-btn"
+            onclick="pauseBhajan(10)">
+                ⏸ Pause
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="progress-area">
+
+        <input
+        type="range"
+        id="progress10"
+        value="0"
+        min="0"
+        max="100"
+        onchange="seekBhajan(10,this.value)">
+
+    </div>
+
+    <audio
+    id="bhajan10"
+    src="assets/audio/Shikarpura Santo Ri Bhumi Rajaramji Viral Bhajan Jogaram Prajapat.mp3">
+    </audio>
+
+</div>
+
+
+
+<!-- 11 -->
+
+<div class="bhajan" id="card11">
+
+    <div class="bhajan-top">
+
+        <div class="bhajan-info">
+
+            <div class="bhajan-number">
+                11
+            </div>
+
+            <h3>
+                छोटा छोटा सेठा ने तू मोटो सेठ बनावे
+            </h3>
+
+        </div>
+
+        <div class="bhajan-buttons">
+
+            <button
+            class="play-btn"
+            onclick="playBhajan(11)">
+                ▶ Play
+            </button>
+
+            <button
+            class="pause-btn"
+            onclick="pauseBhajan(11)">
+                ⏸ Pause
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="progress-area">
+
+        <input
+        type="range"
+        id="progress11"
+        value="0"
+        min="0"
+        max="100"
+        onchange="seekBhajan(11,this.value)">
+
+    </div>
+
+    <audio
+    id="bhajan11"
+    src="assets/audio/Chhota Chhota Setha ne tu Moto Seth Banave.mp3">
+    </audio>
+
+</div>
+
+
+
+<!-- 12 -->
+
+<div class="bhajan" id="card12">
+
+    <div class="bhajan-top">
+
+        <div class="bhajan-info">
+
+            <div class="bhajan-number">
+                12
+            </div>
+
+            <h3>
+                मीठे रस से भरयो री राधा रानी लागे
+            </h3>
+
+        </div>
+
+        <div class="bhajan-buttons">
+
+            <button
+            class="play-btn"
+            onclick="playBhajan(12)">
+                ▶ Play
+            </button>
+
+            <button
+            class="pause-btn"
+            onclick="pauseBhajan(12)">
+                ⏸ Pause
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="progress-area">
+
+        <input
+        type="range"
+        id="progress12"
+        value="0"
+        min="0"
+        max="100"
+        onchange="seekBhajan(12,this.value)">
+
+    </div>
+
+    <audio
+    id="bhajan12"
+    src="assets/audio/Mithe Ras Se Bharyo Ri Radha Rani Lage.mp3">
+    </audio>
+
+</div>
+
+
+
+<!-- 13 -->
+
+<div class="bhajan" id="card13">
+
+    <div class="bhajan-top">
+
+        <div class="bhajan-info">
+
+            <div class="bhajan-number">
+                13
+            </div>
+
+            <h3>
+                वीर हनुमाना अति बलवाना
+            </h3>
+
+        </div>
+
+        <div class="bhajan-buttons">
+
+            <button
+            class="play-btn"
+            onclick="playBhajan(13)">
+                ▶ Play
+            </button>
+
+            <button
+            class="pause-btn"
+            onclick="pauseBhajan(13)">
+                ⏸ Pause
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="progress-area">
+
+        <input
+        type="range"
+        id="progress13"
+        value="0"
+        min="0"
+        max="100"
+        onchange="seekBhajan(13,this.value)">
+
+    </div>
+
+    <audio
+    id="bhajan13"
+    src="assets/audio/Lofi Version Veer Hanumana Ati Balwana.mp3">
+    </audio>
+
+</div>
+
+
+
+<!-- 14 -->
+
+<div class="bhajan" id="card14">
+
+    <div class="bhajan-top">
+
+        <div class="bhajan-info">
+
+            <div class="bhajan-number">
+                14
+            </div>
+
+            <h3>
+                श्री कृष्णा गोविन्द हरे मुरारी भजन
+            </h3>
+
+        </div>
+
+        <div class="bhajan-buttons">
+
+            <button
+            class="play-btn"
+            onclick="playBhajan(14)">
+                ▶ Play
+            </button>
+
+            <button
+            class="pause-btn"
+            onclick="pauseBhajan(14)">
+                ⏸ Pause
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="progress-area">
+
+        <input
+        type="range"
+        id="progress14"
+        value="0"
+        min="0"
+        max="100"
+        onchange="seekBhajan(14,this.value)">
+
+    </div>
+
+    <audio
+    id="bhajan14"
+    src="assets/audio/Shri Krishna Govind Hare Murari  Krishan Relaxing Bhajan 2026.mp3">
+    </audio>
+
+</div>
+
+
+</div>
+
+
+
+<!-- ============================= -->
+<!-- MALA -->
+<!-- ============================= -->
+
+<div class="mala-area">
+
+    <h2>
+        📿 भगवान को माला अर्पित करें
+    </h2>
+
+    <br>
+
+    <img
+    src="assets/images/mala.jpg"
+    class="deity"
+    onclick="offerMala()"
+    alt="राजेश्वर भगवान">
+
+    <div class="counter">
+
+        आज माला अर्पित करने वाले भक्त:
+
+        <span id="malaCount">
+            0
+        </span>
+
+    </div>
+
+    <br>
+
+    <p>
+        भगवान की तस्वीर पर क्लिक करके माला अर्पित करें
+    </p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- ============================= -->
+<!-- FOOTER -->
+<!-- ============================= -->
+
+<footer>
+
+    <div class="footer-bottom">
+
+        © 2026 Rajeshwar Bhagwan Mandir
+
+    </div>
+
+</footer>
+
+
+
+<script>
+
+
+/* ============================= */
+/* MENU */
+/* ============================= */
+
+function toggleMenu() {
+
+    document
+    .getElementById("navbar")
+    .classList.toggle("show");
+
+}
+
+
+
+/* ============================= */
+/* BELL */
+/* ============================= */
+
+function ringBell() {
+
+    const bell =
+    document.getElementById("bellSound");
+
+    bell.currentTime = 0;
+
+    bell.play();
+
+    const icon =
+    document.querySelector(".bell");
+
+    icon.classList.add("ringing");
+
+    setTimeout(() => {
+
+        icon.classList.remove("ringing");
+
+    }, 1000);
+
+}
+
+
+
+/* ============================= */
+/* AARTI */
+/* ============================= */
+
+const aartiSound =
+document.getElementById("aartiSound");
+
+
+
+/* ============================= */
+/* BHAJAN PLAYER */
+/* ============================= */
+
+let currentBhajan = null;
+
+
+
+function playBhajan(number) {
+
+    /* सभी भजन बंद करें */
+
+    for (
+        let i = 1;
+        i <= 14;
+        i++
+    ) {
+
+        const audio =
+        document.getElementById(
+            "bhajan" + i
+        );
+
+        const card =
+        document.getElementById(
+            "card" + i
+        );
+
+        if (i !== number) {
+
+            audio.pause();
+
+            card.classList.remove(
+                "active"
+            );
+
+        }
+
+    }
+
+
+    /* आरती भी रोकें */
+
+    aartiSound.pause();
+
+
+    /* selected bhajan */
+
+    const audio =
+    document.getElementById(
+        "bhajan" + number
+    );
+
+    const card =
+    document.getElementById(
+        "card" + number
+    );
+
+
+    audio.play();
+
+    card.classList.add(
+        "active"
+    );
+
+    currentBhajan = number;
+
+}
+
+
+
+function pauseBhajan(number) {
+
+    const audio =
+    document.getElementById(
+        "bhajan" + number
+    );
+
+    const card =
+    document.getElementById(
+        "card" + number
+    );
+
+    audio.pause();
+
+    card.classList.remove(
+        "active"
+    );
+
+}
+
+
+
+/* ============================= */
+/* PROGRESS BAR */
+/* ============================= */
+
+for (
+    let i = 1;
+    i <= 14;
+    i++
+) {
+
+    const audio =
+    document.getElementById(
+        "bhajan" + i
+    );
+
+    const progress =
+    document.getElementById(
+        "progress" + i
+    );
+
+
+    audio.addEventListener(
+        "timeupdate",
+        function() {
+
+            if (audio.duration) {
+
+                progress.value =
+                (
+                    audio.currentTime /
+                    audio.duration
+                ) * 100;
+
+            }
+
+        }
+    );
+
+
+    audio.addEventListener(
+        "ended",
+        function() {
+
+            document
+            .getElementById(
+                "card" + i
+            )
+            .classList.remove(
+                "active"
+            );
+
+            progress.value = 0;
+
+        }
+    );
+
+}
+
+
+
+function seekBhajan(
+    number,
+    value
+) {
+
+    const audio =
+    document.getElementById(
+        "bhajan" + number
+    );
+
+    if (audio.duration) {
+
+        audio.currentTime =
+        (
+            value / 100
+        ) * audio.duration;
+
+    }
+
+}
+
+
+
+/* ============================= */
+/* MALA COUNTER */
+/* ============================= */
+
+let count =
+Number(
+    localStorage.getItem(
+        "malaCount"
+    )
+) || 0;
+
+
+document
+.getElementById(
+    "malaCount"
+)
+.innerText = count;
+
+
+
+function offerMala() {
+
+    count++;
+
+    localStorage.setItem(
+        "malaCount",
+        count
+    );
+
+
+    document
+    .getElementById(
+        "malaCount"
+    )
+    .innerText = count;
+
+
+    alert(
+        "🙏 राजेश्वर भगवान को माला अर्पित की गई।"
+    );
+
+}
+
+</script>
+
+</body>
+
+</html>

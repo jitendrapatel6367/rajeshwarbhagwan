@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Developer | Jitendra Patel</title>
+
+<link rel="stylesheet"
+href="css/style.css">
+
+<style>
+
+body{
+    background:#fffaf0;
+}
+
+/* Developer Section */
+.developer-section{
+    padding:150px 20px 80px;
+    min-height:80vh;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title span{
+    color:#b8860b;
+    font-weight:bold;
+    font-size:18px;
+}
+
+.section-title h2{
+    margin:10px 0;
+    font-size:32px;
+}
+
+.section-title p{
+    color:#777;
+}
+
+/* Developer Card */
+.developer-card{
+    max-width:600px;
+    margin:auto;
+    background:white;
+    padding:40px 25px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 8px 30px rgba(0,0,0,0.12);
+    border:1px solid #ead9a8;
+}
+
+/* JP Logo */
+.developer-logo{
+    width:110px;
+    height:110px;
+    margin:0 auto 20px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg,#d4af37,#a66a00);
+    color:white;
+    font-size:42px;
+    font-weight:bold;
+    box-shadow:0 6px 20px rgba(166,106,0,0.3);
+}
+
+.developer-card h2{
+    color:#5c3210;
+    margin-bottom:15px;
+}
+
+.developer-card p{
+    line-height:1.8;
+    color:#555;
+    font-size:16px;
+}
+
+/* Instagram Button */
+.instagram-btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:13px 28px;
+    border-radius:30px;
+    background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.instagram-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Thank You */
+.thank-you{
+    margin-top:35px;
+    padding-top:25px;
+    border-top:1px solid #ead9a8;
+    color:#8a5a00;
+    font-size:18px;
+    font-weight:bold;
+}
+
+/* Mobile */
+@media(max-width:600px){
+
+    .developer-section{
+        padding:130px 15px 60px;
+    }
+
+    .section-title h2{
+        font-size:27px;
+    }
+
+    .developer-card{
+        padding:35px 20px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header class="header">
+
+<div class="logo-area">
+
+<div class="logo">ॐ</div>
+
+<div>
+
+<h2>राजेश्वर भगवान मंदिर</h2>
+
+<span>बासनी सिलावटा</span>
+
+</div>
+
+</div>
+
+
+<button class="menu-btn"
+onclick="toggleMenu()">☰</button>
+
+
+<nav id="navbar">
+
+<a href="index.html">Home</a>
+
+<a href="information.html">Information</a>
+
+<a href="aarti.html">आरती</a>
+
+<a href="gallery.html">Gallery</a>
+
+<a href="reviews.html">Reviews</a>
+
+</nav>
+
+</header>
+
+
+<!-- DEVELOPER SECTION -->
+
+<section class="developer-section">
+
+
+<div class="section-title">
+
+<span>Website Developer</span>
+
+<h2>Jitendra Patel</h2>
+
+<p>
+Website Developed with श्रद्धा, सेवा और समर्पण
+</p>
+
+</div>
+
+
+<div class="developer-card">
+
+
+<div class="developer-logo">
+JP
+</div>
+
+
+<h2>
+Jitendra Patel
+</h2>
+
+
+<p>
+
+इस वेबसाइट को
+
+<strong>Jitendra Patel</strong>
+
+द्वारा डिजाइन एवं विकसित किया गया है।
+
+</p>
+
+
+<a
+class="instagram-btn"
+href="https://www.instagram.com/jitendrapatel6367/"
+target="_blank"
+rel="noopener noreferrer">
+
+📷 Instagram
+
+</a>
+
+
+<div class="thank-you">
+
+🙏 धन्यवाद! आपकी विज़िट के लिए 🙏
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-bottom">
+
+Website Developed by
+
+<strong>Jitendra Patel</strong>
+
+</div>
+
+</footer>
+
+
+<script>
+
+function toggleMenu(){
+
+document
+.getElementById("navbar")
+.classList.toggle("show");
+
+}
+
+</script>
+
+
+</body>
+
+</html>

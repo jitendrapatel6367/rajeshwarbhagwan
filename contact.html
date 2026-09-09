@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | राजेश्वर भगवान मंदिर</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet"
+          href="css/style.css">
+
+
+    <style>
+
+        body{
+            background:#fffaf0;
+        }
+
+
+        /* ================= CONTACT SECTION ================= */
+
+        .contact-section{
+            padding:150px 20px 80px;
+            min-height:80vh;
+        }
+
+
+        .contact-title{
+            text-align:center;
+            margin-bottom:45px;
+        }
+
+
+        .contact-title span{
+            color:#b8860b;
+            font-weight:600;
+            font-size:18px;
+        }
+
+
+        .contact-title h1{
+            color:#5c3210;
+            font-size:36px;
+            margin:10px 0;
+        }
+
+
+        .contact-title p{
+            color:#777;
+            font-size:16px;
+        }
+
+
+        /* ================= CONTACT GRID ================= */
+
+        .contact-container{
+            max-width:1100px;
+            margin:auto;
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:30px;
+        }
+
+
+        /* ================= INFO CARD ================= */
+
+        .contact-card{
+            background:white;
+            padding:35px;
+            border-radius:20px;
+            border:1px solid #ead9a8;
+            box-shadow:0 8px 30px rgba(0,0,0,0.10);
+        }
+
+
+        .contact-card h2{
+            color:#5c3210;
+            margin-bottom:25px;
+        }
+
+
+        .contact-item{
+            display:flex;
+            align-items:flex-start;
+            gap:15px;
+            padding:18px 0;
+            border-bottom:1px solid #eee;
+        }
+
+
+        .contact-item:last-child{
+            border-bottom:none;
+        }
+
+
+        .contact-icon{
+            width:45px;
+            height:45px;
+            min-width:45px;
+            border-radius:50%;
+            background:#fff2c7;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-size:22px;
+        }
+
+
+        .contact-item h3{
+            color:#6b421c;
+            margin-bottom:5px;
+            font-size:18px;
+        }
+
+
+        .contact-item p{
+            color:#666;
+            line-height:1.6;
+            font-size:15px;
+        }
+
+
+        /* ================= MAP BUTTON ================= */
+
+        .map-btn{
+            display:inline-block;
+            margin-top:10px;
+            padding:12px 22px;
+            background:#b8860b;
+            color:white;
+            text-decoration:none;
+            border-radius:25px;
+            font-weight:600;
+            transition:0.3s;
+        }
+
+
+        .map-btn:hover{
+            transform:translateY(-2px);
+            box-shadow:0 7px 18px rgba(0,0,0,0.2);
+        }
+
+
+        /* ================= FORM ================= */
+
+        .contact-form{
+            background:white;
+            padding:35px;
+            border-radius:20px;
+            border:1px solid #ead9a8;
+            box-shadow:0 8px 30px rgba(0,0,0,0.10);
+        }
+
+
+        .contact-form h2{
+            color:#5c3210;
+            margin-bottom:25px;
+        }
+
+
+        .form-group{
+            margin-bottom:18px;
+        }
+
+
+        .form-group label{
+            display:block;
+            margin-bottom:7px;
+            color:#5c3210;
+            font-weight:600;
+        }
+
+
+        .form-group input,
+        .form-group textarea{
+            width:100%;
+            padding:13px 15px;
+            border:1px solid #ddd;
+            border-radius:10px;
+            outline:none;
+            font-family:inherit;
+            font-size:15px;
+            background:#fffdf7;
+        }
+
+
+        .form-group input:focus,
+        .form-group textarea:focus{
+            border-color:#b8860b;
+            box-shadow:0 0 0 2px rgba(184,134,11,0.10);
+        }
+
+
+        .form-group textarea{
+            min-height:130px;
+            resize:vertical;
+        }
+
+
+        .submit-btn{
+            width:100%;
+            border:none;
+            padding:14px;
+            border-radius:30px;
+            background:linear-gradient(135deg,#d4af37,#a66a00);
+            color:white;
+            font-size:16px;
+            font-weight:bold;
+            cursor:pointer;
+            font-family:inherit;
+            transition:0.3s;
+        }
+
+
+        .submit-btn:hover{
+            transform:translateY(-2px);
+            box-shadow:0 8px 20px rgba(0,0,0,0.2);
+        }
+
+
+        /* ================= MAP ================= */
+
+        .map-section{
+            max-width:1100px;
+            margin:0 auto 80px;
+            padding:0 20px;
+        }
+
+
+        .map-box{
+            background:white;
+            border-radius:20px;
+            overflow:hidden;
+            border:1px solid #ead9a8;
+            box-shadow:0 8px 30px rgba(0,0,0,0.10);
+        }
+
+
+        .map-heading{
+            padding:22px;
+            text-align:center;
+        }
+
+
+        .map-heading h2{
+            color:#5c3210;
+            margin-bottom:5px;
+        }
+
+
+        .map-heading p{
+            color:#777;
+        }
+
+
+        .map-box iframe{
+            width:100%;
+            height:350px;
+            border:0;
+            display:block;
+        }
+
+
+        /* ================= THANK YOU ================= */
+
+        .thank-you{
+            text-align:center;
+            padding:30px 20px 60px;
+        }
+
+
+        .thank-you h2{
+            color:#8a5a00;
+            margin-bottom:8px;
+        }
+
+
+        .thank-you p{
+            color:#777;
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media(max-width:768px){
+
+            .contact-section{
+                padding:130px 15px 60px;
+            }
+
+
+            .contact-title h1{
+                font-size:28px;
+            }
+
+
+            .contact-container{
+                grid-template-columns:1fr;
+            }
+
+
+            .contact-card,
+            .contact-form{
+                padding:25px 20px;
+            }
+
+
+            .map-section{
+                padding:0 15px;
+            }
+
+
+            .map-box iframe{
+                height:300px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="logo-area">
+
+        <div class="logo">
+            ॐ
+        </div>
+
+        <div>
+
+            <h2>राजेश्वर भगवान मंदिर</h2>
+
+            <span>बासनी सिलावटा</span>
+
+        </div>
+
+    </div>
+
+
+    <button class="menu-btn"
+            onclick="toggleMenu()">
+
+        ☰
+
+    </button>
+
+
+    <nav id="navbar">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="information.html">
+            Information
+        </a>
+
+        <a href="about-rajeshwar.html">
+            राजेश्वर भगवान
+        </a>
+
+        <a href="aarti.html">
+            आरती & घंटी
+        </a>
+
+        <a href="gallery.html">
+            Gallery
+        </a>
+
+        <a href="suggestions.html">
+            Suggestions
+        </a>
+
+        <a href="reviews.html">
+            Reviews
+        </a>
+
+        <a href="developer.html">
+            Developer
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ================= CONTACT ================= -->
+
+<main>
+
+<section class="contact-section">
+
+
+    <div class="contact-title">
+
+        <span>
+            ॥ जय श्री राजेश्वर भगवान ॥
+        </span>
+
+        <h1>
+            हमसे संपर्क करें
+        </h1>
+
+        <p>
+            मंदिर से संबंधित जानकारी के लिए हमसे संपर्क करें
+        </p>
+
+    </div>
+
+
+
+    <div class="contact-container">
+
+
+        <!-- ================= CONTACT INFO ================= -->
+
+        <div class="contact-card">
+
+
+            <h2>
+                📞 संपर्क जानकारी
+            </h2>
+
+
+            <!-- Phone -->
+
+            <div class="contact-item">
+
+                <div class="contact-icon">
+                    📞
+                </div>
+
+                <div>
+
+                    <h3>
+                        मोबाइल नंबर
+                    </h3>
+
+                    <p>
+                        +91 XXXXXXXXXX
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- WhatsApp -->
+
+            <div class="contact-item">
+
+                <div class="contact-icon">
+                    💬
+                </div>
+
+                <div>
+
+                    <h3>
+                        WhatsApp
+                    </h3>
+
+                    <p>
+                        मंदिर से संपर्क करने के लिए WhatsApp करें।
+                    </p>
+
+                    <a href="https://wa.me/916367439020"
+                       target="_blank"
+                       class="map-btn">
+
+                        WhatsApp करें
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Email -->
+
+            <div class="contact-item">
+
+                <div class="contact-icon">
+                    ✉️
+                </div>
+
+                <div>
+
+                    <h3>
+                        Email
+                    </h3>
+
+                    <p>
+                        jitendrapatel6367@gmail.com
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Location -->
+
+            <div class="contact-item">
+
+                <div class="contact-icon">
+                    📍
+                </div>
+
+                <div>
+
+                    <h3>
+                        मंदिर का पता
+                    </h3>
+
+                    <p>
+
+                        5WVM+54X, Basni Silawatan,<br>
+                        Boranada, Rajasthan 342012
+
+                    </p>
+
+
+                    <a href="https://www.google.com/maps/search/?api=1&query=5WVM%2B54X%2C%20Basni%20Silawatan%2C%20Boranada%2C%20Rajasthan%20342012"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="map-btn">
+
+                        📍 Google Maps पर जाएं
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ================= CONTACT FORM ================= -->
+
+        <div class="contact-form">
+
+
+            <h2>
+                ✉️ संदेश भेजें
+            </h2>
+
+
+            <form onsubmit="sendMessage(event)">
+
+
+                <div class="form-group">
+
+                    <label>
+                        आपका नाम
+                    </label>
+
+                    <input type="text"
+                           id="name"
+                           placeholder="अपना नाम लिखें"
+                           required>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label>
+                        मोबाइल नंबर
+                    </label>
+
+                    <input type="tel"
+                           id="phone"
+                           placeholder="अपना मोबाइल नंबर लिखें"
+                           required>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label>
+                        Email
+                    </label>
+
+                    <input type="email"
+                           id="email"
+                           placeholder="अपना Email लिखें">
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label>
+                        आपका संदेश
+                    </label>
+
+                    <textarea id="message"
+                              placeholder="अपना संदेश लिखें..."
+                              required></textarea>
+
+                </div>
+
+
+
+                <button type="submit"
+                        class="submit-btn">
+
+                    🙏 संदेश भेजें
+
+                </button>
+
+
+            </form>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ================= MAP ================= -->
+
+<section class="map-section">
+
+
+    <div class="map-box">
+
+
+        <div class="map-heading">
+
+            <h2>
+                📍 मंदिर की Location
+            </h2>
+
+            <p>
+                5WVM+54X, Basni Silawatan, Boranada, Rajasthan 342012
+            </p>
+
+        </div>
+
+
+        <iframe
+            src="https://www.google.com/maps?q=5WVM%2B54X%2C%20Basni%20Silawatan%2C%20Boranada%2C%20Rajasthan%20342012&output=embed"
+            loading="lazy"
+            allowfullscreen>
+        </iframe>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ================= THANK YOU ================= -->
+
+<section class="thank-you">
+
+    <h2>
+        🙏 धन्यवाद!
+    </h2>
+
+    <p>
+        राजेश्वर भगवान मंदिर की वेबसाइट पर आने के लिए धन्यवाद।
+    </p>
+
+    <p>
+        हर हर महादेव 🕉️
+    </p>
+
+</section>
+
+
+</main>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+
+    <div class="footer-grid">
+
+
+        <div>
+
+            <h3>
+                राजेश्वर भगवान मंदिर
+            </h3>
+
+            <p>
+                बासनी सिलावट
+            </p>
+
+            <p>
+                श्रद्धा • सेवा • समर्पण
+            </p>
+
+        </div>
+
+
+
+        <div>
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="information.html">
+                Information
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="aarti.html">
+                आरती
+            </a>
+
+            <a href="reviews.html">
+                Reviews
+            </a>
+
+        </div>
+
+
+
+        <div>
+
+            <h3>
+                Contact & Location
+            </h3>
+
+            <p>
+                📞 +91 XXXXXXXXXX
+            </p>
+
+            <p>
+                📍 5WVM+54X, Basni Silawatan
+            </p>
+
+            <p>
+                Boranada, Rajasthan 342012
+            </p>
+
+            <a href="https://www.google.com/maps/search/?api=1&query=5WVM%2B54X%2C%20Basni%20Silawatan%2C%20Boranada%2C%20Rajasthan%20342012"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                📍 Google Maps
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="footer-bottom">
+
+        © 2026 Rajeshwar Bhagwan Mandir
+
+        <br>
+
+        Website Developed by
+
+        <strong>
+            Jitendra Patel
+        </strong>
+
+    </div>
+
+
+</footer>
+
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+function toggleMenu(){
+
+    document
+        .getElementById("navbar")
+        .classList.toggle("show");
+
+}
+
+
+function sendMessage(event){
+
+    event.preventDefault();
+
+    const name =
+        document.getElementById("name").value;
+
+    const phone =
+        document.getElementById("phone").value;
+
+    const email =
+        document.getElementById("email").value;
+
+    const message =
+        document.getElementById("message").value;
+
+
+    /*
+       अभी form demo है।
+       बाद में इसे PHP / Node.js / MongoDB
+       backend से connect किया जा सकता है।
+    */
+
+
+    alert(
+        "धन्यवाद " + name +
+        " 🙏\n\nआपका संदेश प्राप्त हुआ है।"
+    );
+
+
+    event.target.reset();
+
+}
+
+</script>
+
+
+</body>
+
+</html>
